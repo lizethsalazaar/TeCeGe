@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string; 
+  subtitle: String;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<article class="hero">
+  <div class="hero__target">
+    <h1 class="hero__title-target">{title}</h1>
+    <h2 class="hero__subtitle-target">{subtitle}</h2>
+  </div>
+</article>
+
+<style lang="scss">
+  @reference '@styles/global';
+
+  .hero {
+    
+    &__target {
+      @apply text-center;
+    }
+
+    &__title-target {
+      @apply text-amber-400 text-2xl font-bold;
+    }
+
+    &__subtitle-target {
+      @apply text-sm font-[550];
+    }
+
+  }
+</style>

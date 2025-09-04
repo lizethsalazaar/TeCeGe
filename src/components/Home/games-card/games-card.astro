@@ -1,0 +1,80 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  image: ImageMetadata;
+  title: string;
+  subtitle: String;
+  option1: String;
+  option2: String;
+  option3: String;
+  variant?: 'pokemon' | 'yugioh' | 'mtg' | 'db';
+}
+
+const { image, title, subtitle, option1, option2, option3, variant } = Astro.props;
+
+const variantClasses: Record<string, string> = {
+  pokemon: 'from-bg1-pokemon to-bg2-pokemon',
+  yugioh: 'from-bg1-yugioh to-bg2-yugioh',
+  mtg: 'from-bg1-mtg to-bg2-mtg',
+  db: 'from-bg2-pokemon to-bg1-db',
+};
+
+const gradientClass = variant ? variantClasses[variant] : undefined;
+
+---
+
+<article class="games">
+    <div class="games__container-card" class:list={[gradientClass && `bg-gradient-to-r ${gradientClass}`]}>
+        <div class="games__profile">
+            <Image  src={image} alt="image"/>
+        </div>
+
+        <div class="games__information-card">
+            <h1 class="games__title-card">{title}</h1>
+            <h2 class="games__subtitle-card">{subtitle}</h2>
+        </div>
+
+        <div class="games__options-card">
+            <div class="games__option-card">{option1}</div>
+            <div class="games__option-card">{option2}</div>
+            <div class="games__option-card">{option3}</div>
+        </div>
+    </div>
+</article>
+
+<style lang="scss">
+  @reference '@styles/global';
+
+  .games {
+
+    &__container-card{
+        @apply bg-primary py-8 px-8 rounded-2xl text-text h-85 transform hover:-translate-y-3 transition-transform duration-400;
+    }
+
+    &__profile{
+        @apply flex justify-center items-center mb-4;
+    }
+
+    &__information-card{
+        @apply text-center mb-4;
+    }
+
+    &__title-card{
+        @apply text-2xl mb-2 font-bold;
+    }
+
+     &__subtitle-card{
+        @apply text-base;
+    }
+
+    &__options-card{
+        @apply text-center font-medium;
+    }
+
+    &__option-card{
+        @apply text-sm mb-2 py-1 bg-white/20 backdrop-blur-md rounded-lg;
+    }
+  }
+</style>
