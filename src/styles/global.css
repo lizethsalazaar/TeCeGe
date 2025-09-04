@@ -6,4 +6,25 @@
 
 @theme{
   --color-text: #FFFFFF;
+  --color-bg: #E5E7EB;
+  --color-primary: #FF6B35;
+  --color-secondary: #EF4444;
+  --color-search: #F9FAFB;
+  --color-tags:#F3F4F6;
+  --color-title: #1F2937;
+  --color-subtitle: #4B5563;
+  --color-text-search: #ADAEBC;
+  --color-text-op: #374151;
+  --color-bg1-pokemon: #FACC15;
+  --color-bg2-pokemon: #F97316;
+  --color-bg1-yugioh: #A855F7;
+  --color-bg2-yugioh: #4F46E5;
+  --color-bg1-mtg: #22C55E;
+  --color-bg2-mtg: #0D9488;
+  --color-bg1-db: #DC2626;
+  --color-bg8: #9333EA;
+  --color-circle1: #DCFCE7;
+  --color-circle2: #FEF9C3;
+  --color-circle3: #DBEAFE;
+  --color-circle4: #F3E8FF;
 }

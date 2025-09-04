@@ -1,0 +1,1 @@
+export { default as CardTargets } from "./targets-card.astro"

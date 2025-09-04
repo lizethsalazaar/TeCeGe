@@ -1,0 +1,1 @@
+export { default as CardHeros } from "./heros-card.astro"

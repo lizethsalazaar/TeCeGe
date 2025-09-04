@@ -1,0 +1,1 @@
+export { default as CardGames } from "./games-card.astro"
