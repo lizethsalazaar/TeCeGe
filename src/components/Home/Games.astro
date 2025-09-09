@@ -1,0 +1,90 @@
+---
+import { CardGames } from "./games-card";
+import  pokemon from "@images/img1.png";
+import yugi from "@images/img2.png";
+import mtg from "@images/img3.png"
+import dragon from "@images/img4.png"
+
+const gamesData = [
+  {
+    image: pokemon,
+    title: "Pokémon TCG",
+    subtitle: "15,000+ cartas disponibles",
+    option1: "Base Set",
+    option2: "Evolving Skies",
+    option3: "Crown Zenith",
+    variant: "pokemon",
+  },
+  {
+    image: yugi,
+    title: "Yu-Gi-Oh!",
+    subtitle: "12,000+ cartas disponibles",
+    option1: "Legend of Blue Eyes",
+    option2: "Duelist Pack",
+    option3: "Structure Deck", 
+    variant: "yugioh",
+  },
+  {
+    image: mtg,
+    title: "Magic MTG",
+    subtitle: "20,000+ cartas disponibles",
+    option1: "Alpha/Beta",
+    option2: "Modern Masters",
+    option3: "Commander", 
+    variant: "mtg",
+  },
+  {
+    image: dragon,
+    title: "Dragon Ball",
+    subtitle: "8,000+ cartas disponibles",
+    option1: "Galactic Battle",
+    option2: "World Martial Arts",
+    option3: "Ultimate Box", 
+    variant: "db",
+  },
+]
+---
+
+<section class="games">
+    <div class="games__container">
+        <div class="games__information">
+            <h1 class="games__title">Juegos más populares</h1>
+            <h2 class="games__subtitle">Explora las mejores cartas de tus juegos favoritos</h2>
+        </div>
+
+        <div class="games__cards">
+            {gamesData.map((card) => <CardGames {...card} />)}
+        </div>
+
+    </div>
+
+</section>
+
+
+<style lang="scss">
+  @reference '@styles/global';
+
+  .games{
+    @apply w-full font-sans;
+
+    &__container{
+        @apply bg-bg p-16;
+    }
+
+    &__information{
+        @apply text-center mb-12;
+    }
+
+    &__title{
+        @apply text-4xl font-bold text-title mb-4;
+    }
+
+    &__subtitle{
+        @apply text-xl font-medium text-subtitle;
+    }
+
+    &__cards{
+        @apply grid grid-cols-4 gap-8;
+    }  
+  }
+</style>
