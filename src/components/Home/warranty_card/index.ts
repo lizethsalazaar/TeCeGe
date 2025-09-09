@@ -1,0 +1,1 @@
+export { default as CardWarranty} from './warranty_card.astro'

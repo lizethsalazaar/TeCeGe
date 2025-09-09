@@ -22,9 +22,11 @@
   --color-bg1-mtg: #22C55E;
   --color-bg2-mtg: #0D9488;
   --color-bg1-db: #DC2626;
-  --color-bg8: #9333EA;
-  --color-circle1: #DCFCE7;
-  --color-circle2: #FEF9C3;
-  --color-circle3: #DBEAFE;
-  --color-circle4: #F3E8FF;
+  --color-bg-warranty: #9333EA;
+  --color-warranty-text: #FFEDD5;
+  --color-scoring: #FDE047;
+  --color-car: #DCFCE7;
+  --color-money: #FEF9C3;
+  --color-hands: #DBEAFE;
+  --color-star: #F3E8FF;
 }

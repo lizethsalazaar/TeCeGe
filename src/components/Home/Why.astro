@@ -1,0 +1,156 @@
+---
+import { CardWarranty } from "./warranty_card";
+import  CarIcon from "@icons/car.svg";
+import MoneyIcon from "@icons/money.svg";
+import HandsIcon from "@icons/hands.svg";
+import StarIcon from "@icons/star3.svg";
+import StarYellow from "@icons/star2.svg";
+import ShieldIcon from "@icons/shield.svg";
+import ArrowIcon from "@icons/arrow_reverse.svg";
+import HeadphonesIcon from "@icons/headphones.svg";
+import FlowerIcon from "@icons/flower.svg";
+
+const missionData = [
+    {
+        icon: CarIcon,
+        title: "Envíos por todo México 🇲🇽",
+        text: "Entrega rápida y segura desde CDMX, Guadalajara, Monterrey y más ciudades principales",
+        variant: "car",
+    },
+    {
+        icon: MoneyIcon,
+        title: "Precios en pesos mexicanos 💰",
+        text: "Sin conversiones ni comisiones extra. Paga con OXXO, MercadoPago o tarjeta",
+        variant: "money",
+    },
+    {
+        icon: HandsIcon,
+        title: "Vendedores verificados 🤝",
+        text: "Todos nuestros vendedores pasan por un proceso de verificación riguroso",
+        variant: "hands",
+    },
+    {
+        icon: StarIcon,
+        title: "Sistema de calificaciones",
+        text: "Reseñas reales de la comunidad para que compres con confianza",
+        variant: "star",
+    },
+]
+---
+
+
+<section class="why">
+    <div class="why__container">
+        <div class="why__information">
+            <h1 class="why__title">¿Por qué elegir TCG MX?</h1>
+            <h2 class="why__subtitle">Somos la plataforma de confianza para coleccionistas y jugadores en todo México</h2>
+        </div>
+
+        <div class="why__text-container">
+            <div class="why__options">
+                {missionData.map((card) => <CardWarranty {...card} />)}
+            </div>
+
+            <div class="why__warranty">
+                <div class="why__warranty-information">
+                    <h1 class="why__warranty-title">Garantía TCG MX</h1>
+                    <h2 class="why__warranty-subtitle">Tu compra 100% protegida</h2>
+                </div>
+
+                <div class="why__list">
+                    <ul>
+                        <li class="why__list-op"><ShieldIcon/><span>Protección del comprador</span></li>
+                        <li class="why__list-op"><ArrowIcon/><span>Devoluciones fáciles</span></li>
+                        <li class="why__list-op"><HeadphonesIcon/><span>Soporte 24/7</span></li>
+                        <li class="why__list-op"><FlowerIcon/><span>Autenticidad garantizada</span></li>
+                    </ul>
+                </div>
+
+                <div class="why__scoring">
+                    <h1 class="why__scoring-title">4.9/5</h1>
+                    <div class="why__scoring-icon">
+                        <StarYellow/>
+                        <StarYellow/>
+                        <StarYellow/>
+                        <StarYellow/>
+                        <StarYellow/>
+                    </div>
+                    <h2 class="why__scoring-subtitle">Basado en +2,500 reseñas</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style lang="scss">
+    @reference '@styles/global';
+
+    .why{
+        @apply w-full;
+
+        &__container{
+            @apply p-16;
+        }
+
+        &__information{
+            @apply text-center px-70 mb-18;
+        }
+
+        &__title{
+            @apply text-4xl text-title font-bold mb-4;
+        }
+
+        &__subtitle{
+            @apply text-xl text-subtitle font-medium;
+        }
+
+        &__text-container{
+            @apply grid grid-cols-2;
+        }
+
+        &__options{
+            @apply pr-10 py-10;
+        }
+
+        &__warranty{
+            @apply bg-gradient-to-br from-primary to-bg-warranty rounded-xl p-10 transform hover:scale-105 duration-300;
+        }
+
+         &__warranty-information{
+            @apply  text-text text-center mb-8 mt-6;
+        }
+
+        &__warranty-title{
+            @apply text-3xl font-bold mb-2;
+        }
+
+        &__warranty-subtitle{
+            @apply text-base text-warranty-text font-medium;
+        }
+
+        &__list{
+            @apply text-text mb-8;
+        }
+
+        &__list-op{
+            @apply mb-4 font-medium flex items-center space-x-4;
+        }
+
+        &__scoring{
+            @apply text-center;
+        }
+
+        &__scoring-title{
+            @apply text-scoring text-4xl font-bold mb-2;
+        }
+
+        &__scoring-icon{
+            @apply grid grid-cols-5 px-53 mb-2;
+        }
+
+        &__scoring-subtitle{
+            @apply text-warranty-text text-sm font-medium;
+        }
+    }
+</style>
