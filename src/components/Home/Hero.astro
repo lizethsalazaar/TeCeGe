@@ -82,15 +82,15 @@ const optionsData = [
     @apply w-full font-sans;
 
     &__container {
-      @apply grid grid-cols-1 md:grid-cols-2 gap-5 px-20 bg-[url('../src/assets/images/home/bg.png')] bg-cover bg-indigo-700;
+      @apply grid grid-cols-1 md:grid-cols-2 gap-5 px-10 md:px-20 bg-[url('../src/assets/images/home/bg.png')] bg-cover bg-indigo-700;
     }
 
     &__information {
-      @apply w-full h-fit text-text py-20;
+      @apply w-full h-fit text-text py-10 md:py-20;
     }
 
     &__title {
-      @apply text-6xl font-[1000] mb-6 transform hover:rotate-[360deg] transition-transform duration-900;
+      @apply text-5xl md:text-6xl font-[1000] mb-6 transform hover:rotate-[360deg] transition-transform duration-900;
     }
 
     &__span {
@@ -106,7 +106,7 @@ const optionsData = [
     }
 
     &__button-explore {
-      @apply bg-gradient-to-r from-orange-400 to-orange-600  text-text font-bold py-4 px-10 rounded-4xl transform hover:scale-105 hover:from-bg1-db hover:to-bg2-pokemon cursor-pointer;
+      @apply mb-4 bg-gradient-to-r from-orange-400 to-orange-600  text-text font-bold py-4 px-10 rounded-4xl transform hover:scale-105 hover:from-bg1-db hover:to-bg2-pokemon cursor-pointer;
     }
 
     &__button-catalog {
@@ -118,7 +118,7 @@ const optionsData = [
     }
 
     &__options {
-      @apply py-45 px-4;
+      @apply py-10 md:py-45 px-4;
     }
 
     &__options-container{
