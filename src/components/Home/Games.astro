@@ -1,9 +1,9 @@
 ---
-import { CardGames } from "./games-card";
 import  pokemon from "@images/img1.png";
 import yugi from "@images/img2.png";
 import mtg from "@images/img3.png"
 import dragon from "@images/img4.png"
+import { CardGames } from "./games-card";
 
 const gamesData = [
   {
@@ -53,7 +53,7 @@ const gamesData = [
         </div>
 
         <div class="games__cards">
-            {gamesData.map((card) => <CardGames {...card} />)}
+            {gamesData.map((card) => <CardGames {...card}/>)}
         </div>
 
     </div>
@@ -84,7 +84,7 @@ const gamesData = [
     }
 
     &__cards{
-        @apply grid grid-cols-4 gap-8;
+        @apply grid grid-cols-1 md:grid-cols-4 gap-8;
     }  
   }
 </style>
